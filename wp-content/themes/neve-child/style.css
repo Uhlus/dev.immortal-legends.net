@@ -75,9 +75,43 @@ body {
 	--gutenslider-dot-color: var(--color-1) !important;
 	/*other*/
 	--transition: 250ms;
+	@media screen and (max-width:959px) {
+		--wp--preset--font-size--small: .8rem;
+		--wp--preset--font-size--medium: 1.2rem;
+		--wp--preset--font-size--large: 2rem;
+		--wp--preset--font-size--x-large: 3.5rem;
+		--bodyfontsize: var(--wp--preset--font-size--medium);
+	}
+	@media screen and (max-width:499px) {
+		/* h1 */
+		--h1fontsize: 3rem;
+		/* h2 */
+		--h2fontsize: 2rem;
+		/* h3 */
+		--h3fontsize: 1.7rem;
+		/* h4 */
+		--h4fontsize: 1.6rem;
+		/* h5 */
+		--h5fontsize: 1.4rem;
+		/* h6 */
+		--h6fontsize: var(--wp--preset--font-size--medium);
+
+	}
 }
 html {
 	font-size: 1vw !important;
+	@media screen and (max-width:1499px) {
+		font-size: 1.1vw !important;
+	}
+	@media screen and (max-width:959px) {
+		font-size: 1.5vw !important;
+	}
+	@media screen and (max-width:781px) {
+		font-size: 2vw !important;
+	}
+	@media screen and (max-width:499px) {
+		font-size: 3vw !important;
+	}
 }
 body.il-color-switch-mode {
 	--nv-site-bg: var(--bolor-bg-light);
@@ -103,7 +137,9 @@ h4,
 h5,
 h6 {
 	font-family: var(--font-1);
+	margin-bottom: 1em;
 }
+
 h2 {
 	color: var(--color-1);
 }
