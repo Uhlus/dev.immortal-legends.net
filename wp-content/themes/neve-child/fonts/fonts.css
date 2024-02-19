@@ -1,0 +1,22 @@
+@font-face {
+	font-family: 'Friz Quadrata BT';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Friz Quadrata BT'), url('/wp-content/themes/neve-child/fonts/frizquadrata-bt-cufonfonts-webfont/friz-quadrata-bt-58703370183b3.woff') format('woff');
+}
+@font-face {
+	font-family: 'Friz Quadrata BT';
+	font-style: normal;
+	font-weight: 800;
+	src: local('Friz Quadrata Bold BT'), url('/wp-content/themes/neve-child/fonts/frizquadrata-bt-cufonfonts-webfont/friz-quadrata-bold-bt-587034ce36b86.woff') format('woff');
+}
+@font-face {
+	font-family: 'Josefin Sans';
+	font-style: normal;
+	src: url('/wp-content/themes/neve-child/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('woff');
+}
+@font-face {
+	font-family: 'Josefin Sans';
+	font-style: italic;
+	src: url('/wp-content/themes/neve-child/fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf') format('woff');
+}

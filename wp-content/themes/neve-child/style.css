@@ -1,0 +1,358 @@
+/*
+Theme Name:   Neve Child
+Theme URI:    https://themeisle.com/themes/neve/
+Description:  Neve Child Theme
+Author:       Immortal Legends
+Author URI:   https://immortal-legends.net
+Template:     neve
+Version:      1.0.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Tags:         dark
+Text Domain:  neve-child
+*/
+/* -------------------------------------------------------------------------- */
+/*                                    setup                                   */
+/* -------------------------------------------------------------------------- */
+body {
+	--color-1: rgba(255, 110, 45, 1);
+	--bolor-bg-dark: #000;
+	--bolor-text-dark: #fff;
+	--bolor-bg-light: #fff;
+	--bolor-text-light: #000;
+	--nv-site-bg: var(--bolor-bg-dark);
+	--nv-text-color: var(--bolor-text-dark);
+	--font-1: 'Friz Quadrata BT';
+	--font-2: 'Josefin Sans';
+	--bodyfontfamily: var(--font-1);
+	--headingsfontfamily: var(--font-2);
+	--bodyfontsize: .8rem;
+	--bodylineheight: 1.6em;
+	--bodyletterspacing: 0px;
+	--bodyfontweight: 400;
+	/* h1 */
+	--h1fontsize: 2rem;
+	--h1fontweight: 400;
+	--h1lineheight: 1.2em;
+	--h1letterspacing: 0px;
+	--h1texttransform: none;
+	/* h2 */
+	--h2fontsize: 1.5rem;
+	--h2fontweight: 400;
+	--h2lineheight: 1.3em;
+	--h2letterspacing: 0px;
+	--h2texttransform: none;
+	/* h3 */
+	--h3fontsize: 1.4rem;
+	--h3fontweight: 400;
+	--h3lineheight: 1.4em;
+	--h3letterspacing: 0px;
+	--h3texttransform: none;
+	/* h4 */
+	--h4fontsize: 1.3rem;
+	--h4fontweight: 400;
+	--h4lineheight: 1.6;
+	--h4letterspacing: 0px;
+	--h4texttransform: none;
+	/* h5 */
+	--h5fontsize: 1.2rem;
+	--h5fontweight: 400;
+	--h5lineheight: 1.6em;
+	--h5letterspacing: 0px;
+	--h5texttransform: none;
+	/* h6 */
+	--h6fontsize: .9rem;
+	--h6fontweight: 400;
+	--h6lineheight: 1.6em;
+	--h6letterspacing: 0px;
+	--h6texttransform: none;
+	/* other fonts*/
+	--wp--preset--font-size--small: .7rem;
+	--wp--preset--font-size--medium: 1rem;
+	--wp--preset--font-size--large: 2rem;
+	--wp--preset--font-size--x-large: 3.5rem;
+	/* gutenslider */
+	--gutenslider-dot-color: var(--color-1) !important;
+	/*other*/
+	--transition: 250ms;
+}
+html {
+	font-size: 1vw !important;
+}
+body.il-color-switch-mode {
+	--nv-site-bg: var(--bolor-bg-light);
+	--nv-text-color: var(--bolor-text-light);
+}
+@media (prefers-color-scheme: light) {
+	body {
+		--nv-site-bg: var(--bolor-bg-light);
+		--nv-text-color: var(--bolor-text-light);
+	}
+	body.il-color-switch-mode {
+		--nv-site-bg: var(--bolor-bg-dark);
+		--nv-text-color: var(--bolor-text-dark);
+	}
+}
+/* -------------------------------------------------------------------------- */
+/*                                    fonts                                   */
+/* -------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-1);
+}
+h2 {
+	color: var(--color-1);
+}
+body {
+	font-family: var(--font-2);
+}
+p {
+	margin-bottom: 1em;
+}
+a {
+	color: var(--color-1);
+	text-decoration: none;
+	transition: var(--transition);
+}
+a:hover {
+	color: var(--nv-text-color);
+	text-decoration: underline;
+}
+.swiper-slide img {
+	animation-name: animation;
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@keyframes animation {
+	0% {
+		translate: 0% 0%;
+		scale: 1;
+	}
+	50% {
+		translate: 2% 1%;
+		scale: 1.05;
+	}
+	100% {
+		translate: -1% -2%;
+		scale: 1.1;
+	}
+}
+.nv-page-title-wrap {
+	display: none !important;
+}
+.il-lower-contrast {
+	filter: contrast(50%);
+}
+/* -------------------------------------------------------------------------- */
+/*                                    intro                                   */
+/* -------------------------------------------------------------------------- */
+.il-intro-icon {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem !important;
+	margin-bottom: 2rem !important;
+}
+.il-intro-icon img {
+	width: 7rem;
+	display: flex;
+}
+/* -------------------------------------------------------------------------- */
+/*                                   layout                                   */
+/* -------------------------------------------------------------------------- */
+.nv-content-wrap> :is(div, figure) {
+	margin-bottom: 1rem;
+}
+/* -------------------------------------------------------------------------- */
+/*                                   Members                                  */
+/* -------------------------------------------------------------------------- */
+.il-members {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.il-member {
+	display: grid;
+	grid-template-rows: minmax(0, 1fr) repeat(4, auto) minmax(0, 1fr);
+	grid-template-columns: 1fr 2fr;
+}
+.il-member::before,
+.il-member::after {
+	content: '';
+	display: block;
+}
+.il-member::before {
+	grid-area: 1 / 2 / 2 / 3;
+}
+.il-member::after {
+	grid-area: 12 / 2 / 13 / 3;
+}
+.il-member-image {
+	grid-row: 1 / 13;
+	grid-column: 1 / 2;
+	margin: .5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* border-radius:100vw; */
+	/* overflow: hidden; */
+	aspect-ratio: 1 / 1;
+	position: relative;
+	overflow: hidden;
+	border-radius: 100vw;
+}
+.il-member-image img {
+	border-radius: 100vw;
+	position: absolute;
+	width: 100% !important;
+	height: 100% !important;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	object-fit: cover;
+}
+.il-member-image .il-member-placeholder-img {
+	object-fit: contain;
+}
+.il-member-image img:not(.il-member-placeholder-img) {
+	scale: .75;
+}
+.il-member-info {
+	grid-column: 2 / 3;
+}
+.il-member-tag {
+	font-size: 1.3rem;
+	font-family: var(--font-1);
+	margin-bottom: .25rem;
+}
+.il-member-tag a {
+	text-decoration: underline;
+}
+/* Gutenslider */
+.wp-block-eedee-block-gutenslider .eedee-gutenslider-pagination.swiper-pagination-bullets:not(.swiper-pagination-bullets-dynamic) {
+	top: .5rem;
+	left: auto;
+	right: 1rem;
+	bottom: auto;
+	padding: 0 !important;
+}
+.wp-block-eedee-block-gutenslider .swiper-pagination-bullet {
+	background-color: var(--color-1) !important;
+}
+/* ------------------------------- leadership ------------------------------- */
+.il-leadership {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 0rem;
+}
+.il-leadership .il-member {
+	padding: 0.5rem;
+	width: 20%;
+	text-align: center;
+	display: grid;
+	grid-template-areas:
+		'headline'
+		'img'
+		'tag'
+		'name'
+		'description'
+		'since'
+		'guardian'
+		'guardian-of'
+	;
+	grid-template-rows: minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, auto);
+	grid-template-columns: 1fr;
+}
+.il-leadership .il-member-image {
+	grid-area: img;
+}
+.il-leadership .il-member-tag {
+	grid-area: tag;
+}
+.il-leadership .il-member-name {
+	grid-area: name;
+}
+.il-leadership .il-member-headline {
+	grid-area: headline;
+}
+.il-leadership .il-member-description {
+	grid-area: description;
+}
+.il-leadership .il-member-since {
+	grid-area: since;
+}
+.il-leadership .il-member-guardian {
+	grid-area: guardian;
+}
+.il-leadership .il-member-guardian-of {
+	grid-area: guardian-of;
+}
+/* -------------------------------------------------------------------------- */
+/*                                Color Switch                                */
+/* -------------------------------------------------------------------------- */
+.il-color-switch {
+	--size: 1.5rem;
+	position: fixed;
+	inset: auto auto 1rem 1rem;
+	background-color: var(--color-1);
+	display: block;
+	aspect-ratio: 2 / 1;
+	height: var(--size);
+	border-radius: var(--size);
+	z-index: 30;
+	overflow: hidden;
+}
+.il-color-switch::before {
+	content: '';
+	background-image: url('/wp-content/uploads/2023/10/Schuppe-Vektor_Muster1.svg');
+	background-size: 7rem auto;
+	background-position: 100% 150%;
+	position: absolute;
+	inset: 0;
+	animation-name: move_bg;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-play-state: paused;
+}
+.il-color-switch:hover::before {
+	animation-play-state: running;
+}
+.il-color-switch input {
+	opacity: 0;
+}
+.il-color-switch-slide-circle {
+	width: calc(var(--size) * 0.8);
+	position: absolute;
+	top: 50%;
+	left: calc(var(--size) * 0.2);
+	translate: 0 -50%;
+	display: block;
+	aspect-ratio: 1 / 1;
+	background-color: var(--nv-text-color);
+	border-radius: 100%;
+	transition: var(--transition) cubic-bezier(0.68, -0.6, 0.32, 1.6);
+	border: calc(var(--size) * 0.25) solid var(--nv-site-bg);
+	box-sizing: border-box;
+}
+input:checked+.il-color-switch-slide-circle {
+	left: calc(100% - var(--size) * 0.2);
+	translate: -100% -50%;
+}
+/* -------------------------------------------------------------------------- */
+/*                                 animations                                 */
+/* -------------------------------------------------------------------------- */
+@keyframes move_bg {
+	0% {
+		background-position: -7rem 0rem;
+	}
+	100% {
+		background-position: 0rem -7rem;
+	}
+}
