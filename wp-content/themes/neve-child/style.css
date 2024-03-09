@@ -228,15 +228,18 @@ a:hover {
 		&::after {
 			content: '';
 			display: block;
-			@media screen and (max-width:499px) {
-				display: none;
-			}
 		}
 		&::before {
 			grid-area: 1 / 2 / 2 / 3;
 		}
 		&::after {
 			grid-area: 12 / 2 / 13 / 3;
+		}
+		@media screen and (max-width:499px) {
+			&::before,
+			&::after {
+				display: none !important;
+			}
 		}
 		.il-member-image {
 			grid-row: 1 / 13;
@@ -411,6 +414,24 @@ a:hover {
 	& input:checked + .il-color-switch-slide-circle {
 		left: calc(100% - var(--size) * 0.2);
 		translate: -100% -50%;
+	}
+}
+/* -------------------------------------------------------------------------- */
+/*                                   slider                                   */
+/* -------------------------------------------------------------------------- */
+.wp-block-eedee-block-gutenslider {
+	.gs-frontend.gs-finished-layout:not(.adaptive-height):not(.slides-auto) {
+		& .eedee-background-div,
+		& .eedee-swiper-outer,
+		& .swiper,
+		& .swiper-slide,
+		& .swiper-wrapper {
+			min-height: 0;
+			aspect-ratio: 2560 / 795;
+		}
+	}
+	.eedee-gutenslider-pagination.swiper-pagination-bullets:not(.swiper-pagination-bullets-dynamic) {
+		right: auto
 	}
 }
 /* -------------------------------------------------------------------------- */
