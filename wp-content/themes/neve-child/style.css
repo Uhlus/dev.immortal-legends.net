@@ -420,7 +420,7 @@ a:hover {
 /*                                   slider                                   */
 /* -------------------------------------------------------------------------- */
 .wp-block-eedee-block-gutenslider {
-	.gs-frontend.gs-finished-layout:not(.adaptive-height):not(.slides-auto) {
+	&.gs-frontend.gs-finished-layout:not(.adaptive-height):not(.slides-auto) {
 		& .eedee-background-div,
 		& .eedee-swiper-outer,
 		& .swiper,
