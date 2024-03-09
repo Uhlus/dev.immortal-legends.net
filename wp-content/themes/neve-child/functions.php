@@ -2,20 +2,38 @@
 
 /* TODO: Move to new File */
 add_shortcode('il_members', 'il_members');
-function il_members()
+function il_members($atts = array())
 {
+
+
+	// $wporg_atts = shortcode_atts(
+	// 	array(
+	// 		'title' => 'WordPress.org',
+	// 	), $atts, $tag
+	// );
+
+
+if (gettype($atts) == 'string') {
+	$atts = array('terms' => 'mitglied');
+}
+if (array_key_exists('terms',$atts)) {
+	$terms = $atts['terms'];
+} else {
+	$terms = 'mitglied';
+}
+
 	$args = array(
-		'post_type' => 'il_members',
-		'order_by'  => 'menu_order',
-		'tax_query' => array(
-			array(
-				'taxonomy' => 'il_member_status',
-				'field' => 'slug',
-				'terms' => 'leadership',
-				'operator'  => 'NOT IN'
-			)
-		),
-		'posts_per_page' => -1
+			'post_type' => 'il_members',
+			'order_by'  => 'menu_order',
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'il_member_status',
+					'field' => 'slug',
+					'terms' => $terms,
+					'operator'  => 'IN'
+				)
+			),
+			'posts_per_page' => -1
 	);
 
 	$query = new WP_Query($args);
