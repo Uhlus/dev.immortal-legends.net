@@ -1,0 +1,1 @@
+Logo im intro anzeigen
