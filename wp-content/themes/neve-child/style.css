@@ -77,6 +77,7 @@ body {
 	--gutenslider-dot-color: var(--color-1) !important;
 	/*other*/
 	--transition: 250ms;
+	--invert-leadership-bg: 1;
 	@media screen and (max-width:959px) {
 		--wp--preset--font-size--small: .8rem;
 		--wp--preset--font-size--medium: 1.2rem;
@@ -117,6 +118,7 @@ html {
 body.il-color-switch-mode {
 	--nv-site-bg: var(--bolor-bg-light);
 	--nv-text-color: var(--bolor-text-light);
+	--invert-leadership-bg: 0;
 }
 @media (prefers-color-scheme: light) {
 	body {
@@ -317,6 +319,28 @@ a:hover {
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	gap: 0rem;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		inset: calc(50% - 0.5rem) auto auto 50%;
+		translate: -50% -50%;
+		/* background-image: url('/wp-content/uploads/2024/03/Schuppe-Vektor_Muster_zugeschnitten.svg');
+		background-size: 15rem auto;
+		background-position: 100% 150%;
+		animation-name: move_bg_big;
+		animation-duration: 30s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite; */
+		width: 100vw;
+		height: calc(100% + 1rem);
+		background-color: var(--color-1);
+		opacity: 0.2;
+		z-index: -1;
+		/* filter: invert(var(--invert-leadership-bg)); */
+		/* Fix Pixel rendering*/
+		/* rotate: Y 0.01deg; */
+	}
 	@media screen and (max-width:781px) {
 		gap: 4rem 0;
 		margin-bottom: 4rem !important;
@@ -461,6 +485,14 @@ a:hover {
 	}
 	100% {
 		background-position: 0rem -7rem;
+	}
+}
+@keyframes move_bg_big {
+	0% {
+		background-position: -100% 100%;
+	}
+	100% {
+		background-position: 100% -100%;
 	}
 }
 /* -------------------------------------------------------------------------- */
