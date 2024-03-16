@@ -77,7 +77,6 @@ body {
 	--gutenslider-dot-color: var(--color-1) !important;
 	/*other*/
 	--transition: 250ms;
-	--invert-leadership-bg: 1;
 	@media screen and (max-width:959px) {
 		--wp--preset--font-size--small: .8rem;
 		--wp--preset--font-size--medium: 1.2rem;
@@ -118,7 +117,6 @@ html {
 body.il-color-switch-mode {
 	--nv-site-bg: var(--bolor-bg-light);
 	--nv-text-color: var(--bolor-text-light);
-	--invert-leadership-bg: 0;
 }
 @media (prefers-color-scheme: light) {
 	body {
@@ -214,6 +212,7 @@ a:hover {
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center center;
+		filter: invert(1);
 	}
 }
 /* -------------------------------------------------------------------------- */
