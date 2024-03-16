@@ -16,7 +16,6 @@ kanban-plugin: basic
 
 ## Todo
 
-- [ ] [[Intro]]
 - [ ] [[Mediaplayer]]
 - [ ] [[Menüleiste]]
 
@@ -40,6 +39,7 @@ kanban-plugin: basic
 - [x] Slider Funktioniert nicht
 - [x] [[Liste der Mitglieder]]
 - [x] [[Galerie]]
+- [x] [[Intro]]
 
 
 
