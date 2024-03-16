@@ -145,5 +145,6 @@ function neve_child_enqueue_styles()
 	wp_enqueue_script('jQuery', get_template_directory_uri() . '-child/jquery-3.7.0.min.js');
 	wp_enqueue_script('cookies', get_template_directory_uri() . '-child/cookies.js');
 	wp_enqueue_script('color-switch', get_template_directory_uri() . '-child/color-switch.js');
+	wp_enqueue_script('gallery', get_template_directory_uri() . '-child/gallery-size.js');
 }
 add_action('wp_enqueue_scripts', 'neve_child_enqueue_styles', 9999999999);

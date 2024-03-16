@@ -445,3 +445,51 @@ a:hover {
 		background-position: 0rem -7rem;
 	}
 }
+/* -------------------------------------------------------------------------- */
+/*                                   Gallery                                  */
+/* -------------------------------------------------------------------------- */
+body #content .wp-block-gallery {
+	list-style: none;
+	display: grid;
+	--gap: 0.5rem;
+	--grid-size: minmax(100px, 1fr);
+	gap: var(--gap);
+	grid-auto-rows: var(--grid-size);
+	grid-template-columns: repeat(auto-fill, var(--grid-size));
+	grid-auto-flow: dense;
+	/* counter-reset: asdf; */
+	@media (max-width:767px) {
+		--grid-size: minmax(40px, 1fr);
+	}
+	& .wp-block-image {
+		order: var(--order);
+		width: 100% !important;
+		margin: 0;
+		padding: 0;
+		grid-area: span var(--y) / span var(--x);
+		position: relative;
+		overflow: hidden;
+		/* counter-increment: asdf; */
+		box-sizing: border-box;
+		border-radius: var(--gap);
+		/* &::after {
+			content: counter(asdf);
+			position: absolute;
+			inset: 50% auto auto 50%;
+			translate: -50% -50%;
+			font-size: 50px;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: white;
+		} */
+		& img {
+			object-fit: cover;
+			object-position: center center;
+			position: absolute;
+			max-width: initial !important;
+			width: calc(100% + (var(--gap)* 2)) !important;
+			height: calc(100% + (var(--gap)* 2)) !important;
+			inset: calc(var(--gap) * -1);
+			transition: 500ms;
+		}
+	}
+}
