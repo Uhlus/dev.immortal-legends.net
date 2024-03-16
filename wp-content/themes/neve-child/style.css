@@ -196,6 +196,22 @@ a:hover {
 	width: 7rem;
 	display: flex;
 }
+.il-logo {
+	position: relative;
+	&::after {
+		content: '';
+		width: 10rem;
+		aspect-ratio: 1 / 1;
+		display: block;
+		position: absolute;
+		inset: 4% auto auto 50%;
+		translate: -50% -0%;
+		background-image: url('/wp-content/uploads/2023/06/cropped-iL-Logo.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+}
 /* -------------------------------------------------------------------------- */
 /*                                   layout                                   */
 /* -------------------------------------------------------------------------- */

@@ -12,13 +12,10 @@ kanban-plugin: basic
 
 - [ ] [[News]]
 - [ ] [[Eventkalender]]
-- [ ] [[Galerie]]
 
 
 ## Todo
 
-- [ ] [[Mobiloptimierung]]
-- [ ] [[Liste der Mitglieder]]
 - [ ] [[Intro]]
 - [ ] [[Mediaplayer]]
 - [ ] [[Menüleiste]]
@@ -30,6 +27,7 @@ kanban-plugin: basic
 
 ## in Progress
 
+- [ ] [[Mobiloptimierung]]
 
 
 ## Done
@@ -40,6 +38,8 @@ kanban-plugin: basic
 - [x] Light Mode / Darkmode Switcher
 - [x] Bilder Hochladen
 - [x] Slider Funktioniert nicht
+- [x] [[Liste der Mitglieder]]
+- [x] [[Galerie]]
 
 
 
