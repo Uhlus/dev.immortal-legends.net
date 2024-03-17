@@ -333,7 +333,7 @@ a:hover {
 		animation-iteration-count: infinite; */
 		width: 100vw;
 		height: calc(100% + 1rem);
-		background-color: var(--color-1);
+		background-color: var(--nv-text-color);
 		opacity: 0.2;
 		z-index: -1;
 		/* filter: invert(var(--invert-leadership-bg)); */
