@@ -10,7 +10,6 @@ kanban-plugin: basic
 
 ## Ideas
 
-- [ ] [[News]]
 - [ ] [[Eventkalender]]
 
 
@@ -27,6 +26,8 @@ kanban-plugin: basic
 ## in Progress
 
 - [ ] [[Mobiloptimierung]]
+- [ ] [[News]]
+- [ ] Abstimmungen
 
 
 ## Done
