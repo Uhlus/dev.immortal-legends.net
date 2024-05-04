@@ -555,6 +555,22 @@ body #content .wp-block-gallery {
 	}
 }
 /* -------------------------------------------------------------------------- */
+/*                                    News                                    */
+/* -------------------------------------------------------------------------- */
+.nv-sidebar-wrap h2 {
+	color: var(--nv-text-color);
+}
+.nv-sidebar-wrap #wp-block-search__input-1 {
+	border-radius: 3px;
+	border-color: var(--color-1);
+	background-color: rgba(255, 255, 255, 0);
+	color: var(--nv-text-color);
+}
+.nv-sidebar-wrap .wp-element-button {
+	background-color: var(--color-1);
+	color: var(--nv-text-color);
+}
+/* -------------------------------------------------------------------------- */
 /*                                   footer                                   */
 /* -------------------------------------------------------------------------- */
 #cb-row--footer-bottom {
