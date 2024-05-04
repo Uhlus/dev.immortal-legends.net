@@ -17,6 +17,10 @@ kanban-plugin: basic
 
 - [ ] [[Mediaplayer]]
 - [ ] [[Menüleiste]]
+- [ ] [[Header Bild Schrift]]
+- [ ] Neve Theme Lizenz entfernen / kleiner
+- [ ] Impressumg / AGB / Datenschutz leiste
+- [ ] [[Footer]]
 
 
 ## Bugs
