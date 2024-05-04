@@ -16,9 +16,6 @@ kanban-plugin: basic
 ## Todo
 
 - [ ] [[Mediaplayer]]
-- [ ] [[Menüleiste]]
-- [ ] [[Header Bild Schrift]]
-- [ ] Neve Theme Lizenz entfernen / kleiner
 - [ ] Impressumg / AGB / Datenschutz leiste
 - [ ] [[Footer]]
 
@@ -45,6 +42,9 @@ kanban-plugin: basic
 - [x] [[Liste der Mitglieder]]
 - [x] [[Galerie]]
 - [x] [[Intro]]
+- [x] Neve Theme Lizenz entfernen / kleiner
+- [x] [[Menüleiste]]
+- [x] [[Header Bild Schrift]]
 
 
 

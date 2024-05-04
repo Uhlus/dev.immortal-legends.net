@@ -188,7 +188,7 @@ a:hover {
 /* -------------------------------------------------------------------------- */
 /*                                    intro                                   */
 /* -------------------------------------------------------------------------- */
-.il-intro-icon {
+/* .il-intro-icon {
 	display: flex;
 	justify-content: center;
 	margin-top: 2rem !important;
@@ -214,6 +214,9 @@ a:hover {
 		background-position: center center;
 		filter: invert(1);
 	}
+} */
+.il-intro {
+	margin-top: 0 !important;
 }
 /* -------------------------------------------------------------------------- */
 /*                                   layout                                   */
